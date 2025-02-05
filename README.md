@@ -10,3 +10,4 @@ Mentor 🧑‍🏫 : https://github.com/hkproj | https://github.com/hkproj/100-d
 
 ## Progress
 1. [Day 1](./day001/README.md)
+2. [Day 2](./day002/README.md)
