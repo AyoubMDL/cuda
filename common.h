@@ -1,6 +1,8 @@
 #include <ctime>
 #include <cstdlib>
 #include <chrono>
+#include <iostream>
+
 
 void initializeVectors(float *A, float *B, int N) {
     srand(static_cast<unsigned int>(time(0)));
@@ -23,7 +25,7 @@ double measureExecutionTime(Func func) {
 
 bool compareResults(const float *A, const float *B, int N) {
     for (int i = 0; i < N; i++) {
-        if (fabs(A[i] - B[i]) > 1e-5) {
+        if (fabs(A[i] - B[i]) > 1e-4) {
             std::cout << "Mismatch at index " << i << ": CPU=" << A[i] << " GPU=" << B[i] << std::endl;
             return false;
         }

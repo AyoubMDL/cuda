@@ -2,3 +2,5 @@
 build
 
 .vscode
+
+cuda_toolkit/
