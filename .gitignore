@@ -4,3 +4,12 @@ build
 .vscode
 
 cuda_toolkit/
+
+# Python env
+venv/
+
+# Torch cpp
+libtorch
+*.so
+*.egg-info
+*.pyc
