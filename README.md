@@ -15,3 +15,4 @@ Mentor 🧑‍🏫 : https://github.com/hkproj | https://github.com/hkproj/100-d
 4. [Day 4](./day004/README.md)
 5. [Day 5](./day005/README.md)
 6. [Day 6](./day006/README.md)
+6. [Day 7](./day007/README.md)
