@@ -31,4 +31,5 @@ Mentor 🧑‍🏫 : https://github.com/hkproj | https://github.com/hkproj/100-d
 20. [Day 20](./day020/README.md)
 21. [Day 21](./day021/README.md)
 22. [Day 22](./day022/README.md) Chapter 6
-22. [Day 23](./day023/README.md) Chapter 7 (conv1D)
+23. [Day 23](./day023/README.md) Chapter 7 (conv1D)
+24. [Day 24](./day024/README.md) (Tiled conv1D with halo cells)
