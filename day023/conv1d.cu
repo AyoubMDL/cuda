@@ -105,6 +105,38 @@ __global__ void conv1d_kernel_v2(const float *input, float *output, const int ke
 }
 
 
+// Using general caching for halo cells
+__global__ void conv1d_kernel_v3(const float *input, float *output, const int kernel_size, const int input_size) {
+    unsigned int tid = threadIdx.x;
+    unsigned int index = blockDim.x * blockIdx.x + tid;
+
+    __shared__ float sharedMem[TILE_SIZE];
+    sharedMem[tid] = input[index];
+
+    __syncthreads();
+
+    int this_tile_starting_point = blockIdx.x * blockDim.x;
+    int next_tile_starting_point = (blockIdx.x + 1) * blockDim.x;
+    int input_start_point = index - (kernel_size / 2);
+
+    float out_value = 0.0f;
+    for (int i = 0; i < kernel_size; ++i) {
+        int input_index = input_start_point + i;
+
+        // Handle ghost cells
+        if (input_index >=0 && input_index < input_size) {
+            // Handle halo cells that are not ghost
+            if((input_index >= this_tile_starting_point) && (input_index < next_tile_starting_point)) {
+                out_value += sharedMem[tid + i - (kernel_size / 2)] * W[i];
+            } else {
+                out_value += input[input_index] * W[i];
+            }
+        }
+    }
+    output[index] = out_value;
+}
+
+
 
 void checkCuda(cudaError_t err, const char *msg) {
     if (err != cudaSuccess) {
@@ -133,6 +165,8 @@ void run_conv1d(float *d_input, float *d_weights, float *d_output, float *expect
         conv1d_kernel_v1<<<num_blocks, threads_per_block>>>(d_input, d_output, kernel_size, input_size);
     } else if (version == "v2") {
         conv1d_kernel_v2<<<num_blocks, threads_per_block>>>(d_input, d_output, kernel_size, input_size);
+    } else if (version == "v3") {
+        conv1d_kernel_v3<<<num_blocks, threads_per_block>>>(d_input, d_output, kernel_size, input_size);
     } else {
         fprintf(stderr, "Error: Unknown kernel version '%s'\n", version.c_str());
         return;
@@ -215,9 +249,8 @@ int main() {
     // Run and Compare Both Kernels
     run_conv1d(d_input, d_weights, d_output, cpu_output, KERNEL_SIZE, INPUT_SIZE, "v0"); // Naive
     run_conv1d(d_input, d_weights, d_output, cpu_output, KERNEL_SIZE, INPUT_SIZE, "v1");  // using constant memory
-    run_conv1d(d_input, d_weights, d_output, cpu_output, KERNEL_SIZE, INPUT_SIZE, "v2");  // using constant memory
-
-    
+    run_conv1d(d_input, d_weights, d_output, cpu_output, KERNEL_SIZE, INPUT_SIZE, "v2");  // using halo cells
+    run_conv1d(d_input, d_weights, d_output, cpu_output, KERNEL_SIZE, INPUT_SIZE, "v3");  // using general caching
 
     // Cleanup
     cudaFree(d_input);
