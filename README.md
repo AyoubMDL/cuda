@@ -33,4 +33,5 @@ Mentor 🧑‍🏫 : https://github.com/hkproj | https://github.com/hkproj/100-d
 22. [Day 22](./day022/README.md) Chapter 6
 23. [Day 23](./day023/README.md) Chapter 7 (conv1D)
 24. [Day 24](./day024/README.md) (Tiled conv1D)
-24. [Day 25](./day025/README.md) (Tiled conv2D)
+25. [Day 25](./day025/README.md) (Tiled conv2D)
+26. [Day 26](./day026/README.md) (Tanh forward and backward)
