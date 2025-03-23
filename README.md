@@ -35,3 +35,4 @@ Mentor 🧑‍🏫 : https://github.com/hkproj | https://github.com/hkproj/100-d
 24. [Day 24](./day024/README.md) (Tiled conv1D)
 25. [Day 25](./day025/README.md) (Tiled conv2D)
 26. [Day 26](./day026/README.md) (Tanh forward and backward)
+27. [Day 27](./day027/README.md) (CrossEntropy forward and backward)
