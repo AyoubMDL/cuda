@@ -36,3 +36,4 @@ Mentor 🧑‍🏫 : https://github.com/hkproj | https://github.com/hkproj/100-d
 25. [Day 25](./day025/README.md) (Tiled conv2D)
 26. [Day 26](./day026/README.md) (Tanh forward and backward)
 27. [Day 27](./day027/README.md) (CrossEntropy forward and backward)
+28. [Day 28](./day028/README.md) (Kogge–Stone kernels for Inclusive and Exclusive scans)
