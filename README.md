@@ -38,3 +38,4 @@ Mentor 🧑‍🏫 : https://github.com/hkproj | https://github.com/hkproj/100-d
 27. [Day 27](./day027/README.md) (CrossEntropy forward and backward)
 28. [Day 28](./day028/README.md) (Kogge–Stone kernels for Inclusive and Exclusive scans)
 29. [Day 29](./day029/README.md) (Fixed issues on Kogge–Stone kernels)
+30. [Day 30](./day030/README.md) (Brent-Kung kernel for Inclusive scan)
