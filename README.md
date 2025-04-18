@@ -40,3 +40,4 @@ Mentor 🧑‍🏫 : https://github.com/hkproj | https://github.com/hkproj/100-d
 29. [Day 29](./day029/README.md) (Fixed issues on Kogge–Stone kernels)
 30. [Day 30](./day030/README.md) (Brent-Kung kernel for Inclusive scan)
 31. [Day 31](./day031/README.md) (RNN)
+32. [Day 32](./day032/README.md) (Triton vector addition)
