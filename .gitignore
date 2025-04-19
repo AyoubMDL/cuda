@@ -13,4 +13,5 @@ libtorch
 *.so
 *.egg-info
 *.pyc
+*.perf
 dist/

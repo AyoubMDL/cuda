@@ -41,3 +41,4 @@ Mentor 🧑‍🏫 : https://github.com/hkproj | https://github.com/hkproj/100-d
 30. [Day 30](./day030/README.md) (Brent-Kung kernel for Inclusive scan)
 31. [Day 31](./day031/README.md) (RNN)
 32. [Day 32](./day032/README.md) (Triton vector addition)
+33. [Day 33](./day033/README.md) (Triton naive matmul)
