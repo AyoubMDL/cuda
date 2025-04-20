@@ -42,3 +42,4 @@ Mentor 🧑‍🏫 : https://github.com/hkproj | https://github.com/hkproj/100-d
 31. [Day 31](./day031/README.md) (RNN)
 32. [Day 32](./day032/README.md) (Triton vector addition)
 33. [Day 33](./day033/README.md) (Triton naive matmul)
+34. [Day 34](./day034/README.md) (Block matmul cpu + WIP Triton)
