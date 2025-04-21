@@ -14,4 +14,7 @@ libtorch
 *.egg-info
 *.pyc
 *.perf
+*.csv
+*.png
+*.html
 dist/

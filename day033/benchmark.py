@@ -44,4 +44,4 @@ def benchmark(size, provider):
 
 
 if __name__ == "__main__":
-    benchmark.run(print_data=True)
+    benchmark.run(save_path=".", print_data=False)
