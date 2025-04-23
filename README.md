@@ -44,3 +44,4 @@ Mentor 🧑‍🏫 : https://github.com/hkproj | https://github.com/hkproj/100-d
 33. [Day 33](./day033/README.md) (Triton naive matmul)
 34. [Day 34](./day034/README.md) (Block matmul cpu + WIP Triton)
 35. [Day 35](./day035/README.md) (Block matmul in Triton using 2D grid)
+36. [Day 36](./day036/README.md) (Block matmul in Triton using 1D grid)
